@@ -29,5 +29,3 @@ console.log(hours);
 const minutes = String(Math.floor(time % 60)).padStart(2, "0");
 console.log(minutes);
 console.log(`${hours} : ${minutes}`);
-
-console.log();
