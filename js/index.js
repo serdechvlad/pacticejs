@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 /**
  *? Використовуючи функцію if...else,
@@ -22,12 +22,12 @@
  https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
  70 === 01:10
  */
-const time = prompt('введіть число');
+const time = prompt("введіть число");
 const hours = String(Math.floor(time / 60)).padStart(2, "0");
-console.log(hours)
+console.log(hours);
 
 const minutes = String(Math.floor(time % 60)).padStart(2, "0");
-console.log(minutes)
-console.log(`${hours} : ${minutes}`)
+console.log(minutes);
+console.log(`${hours} : ${minutes}`);
 
-
+console.log();
