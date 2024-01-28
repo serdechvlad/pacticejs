@@ -99,19 +99,40 @@
 //у рядку на протилежний
 //Наприклад 'JavaScript' повинен повернути 'jAVAsCRIPT'
 
-function makeInvetedString(string) {
-  const newArray = string.split("");
-  const updateArray = []; 
-  for (let letter of newArray) {  
-     
-    if (letter === letter.toUpperCase()) {           
-      updateArray.push(letter.toLowerCase());
-    }
-    else {     
-      updateArray.push(letter.toUpperCase());
-    }    
-  }
-  return updateArray.join("");
-  }
+// function makeInvetedString(string) {
+//   const newArray = string.split("");
+//   const updateArray = [];
+//   for (let letter of newArray) {
 
-console.log(makeInvetedString("JavaScript"));
+//     if (letter === letter.toUpperCase()) {
+//       updateArray.push(letter.toLowerCase());
+//     }
+//     else {
+//       updateArray.push(letter.toUpperCase());
+//     }
+//   }
+//   return updateArray.join("");
+//   }
+
+// console.log(makeInvetedString("JavaScript"));
+
+// напиши функцію яка із массиву arr видаляє елемент foo.
+// розвертає цей массив
+// і повертає рядок js is the best
+// вхідний массив не має змінюватись (мутується)
+
+const arr = ["best", "the", "foo", "is", "js"];
+// function createStringFromArr(arr) {
+//   const index = arr.indexOf("foo");
+//   const copyArr = arr.slice();
+//   copyArr.splice(index, 1);
+//   return copyArr.reverse().join(" ");
+// }
+// console.log(createStringFromArr(arr));
+// console.log(arr);
+
+arr
+  .slice(0, arr.indexOf("foo"))
+  .concat(arr.slice(arr.indexOf("foo") + 1, arr.length))
+  .reverse()
+  .join(" ");
