@@ -131,8 +131,23 @@ const arr = ["best", "the", "foo", "is", "js"];
 // console.log(createStringFromArr(arr));
 // console.log(arr);
 
-arr
-  .slice(0, arr.indexOf("foo"))
-  .concat(arr.slice(arr.indexOf("foo") + 1, arr.length))
-  .reverse()
-  .join(" ");
+// arr
+//   .slice(0, arr.indexOf("foo"))
+//   .concat(arr.slice(arr.indexOf("foo") + 1, arr.length))
+//   .reverse()
+//   .join(" ");
+
+// Напиши функцію, яка приймає два масиви і повертає массив спільних значень
+
+const array1 = [1, 23, 3, 7, 5];
+const array2 = [3, 5, 4, 23, 9];
+function newArray(arr1, arr2) {
+  const result = [];
+  for (const item of arr1) {
+    if (arr2.includes(item)) {
+      result.push(item);
+    }
+  }
+  return result;
+}
+console.log(newArray(array1, array2));
