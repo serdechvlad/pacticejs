@@ -48,16 +48,16 @@
 // Напиши функцію findSmallerNumber(numbers)
 // яка приймає массив numbers, шукає найменше число в масиві і повертає це число.
 
-// const numbers = [12, 5, 35, 56, 3, 24, 7, 80, 12];
+const numbers = [12, 5, 35, 56, 3, 24, 7, 80, 12];
 
-// function findSmallerNumber(arr) {
-//   let min = arr[0];
-//   for (const item of arr) {
-//     if (item < min) {
-//       min = item;
-//     }
-//   }
-//   return min;
-// }
-// const result = findSmallerNumber(numbers);
-// console.log(result);
+function findSmallerNumber(arr) {
+  let min = arr[0];
+  for (const item of arr) {
+    if (item < min) {
+      min = item;
+    }
+  }
+  return min;
+}
+const result = findSmallerNumber(numbers);
+console.log(result);
