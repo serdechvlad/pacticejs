@@ -64,32 +64,56 @@
 
 //Напишіть функцію unique(arr), приймає масив рядків і повертає масив унікальні елементів.
 
-const words = [
-  "HTML",
-  "CSS",
-  "JS",
-  "React",
-  "JS",
-  "CSS",
-  "JS",
-  "Node.js",
-  "JS",
-  "React",
-  "CSS",
-  "React",
-  "HTML",
-  "Node.js",
-];
+// const words = [
+//   "HTML",
+//   "CSS",
+//   "JS",
+//   "React",
+//   "JS",
+//   "CSS",
+//   "JS",
+//   "Node.js",
+//   "JS",
+//   "React",
+//   "CSS",
+//   "React",
+//   "HTML",
+//   "Node.js",
+// ];
 
-function unique(arr) {
-  const array = [];
+// function unique(arr) {
+//   const array = [];
 
-  for (const word of arr) {
-    if (!array.includes(word)) {
-      array.push(word);
-    }
-  }
-  return array;
-}
+//   for (const word of arr) {
+//     if (!array.includes(word)) {
+//       array.push(word);
+//     }
+//   }
+//   return array;
+// }
 
-console.log(unique(words));
+// console.log(unique(words));
+
+//^ TODO:==========================
+//Напишіть функцію makeInvetedString(), яка замінює регістр кожного символу
+//у рядку на протилежний
+//Наприклад 'JavaScript' повинен повернути 'jAVAsCRIPT'
+
+// function makeInvetedString(string) {
+//   const newArray = string.split("");
+//   const updateArray = []; 
+//   for (let letter of newArray) {  
+     
+//     if (letter === letter.toUpperCase()) {     
+//       letter = letter.toLowerCase();
+//       updateArray.push(letter);
+//     }
+//     else {
+//       letter = letter.toUpperCase();
+//       updateArray.push(letter);
+//     }    
+//   }
+//   return updateArray.join("");
+//   }
+
+// console.log(makeInvetedString("JavaScript"));
