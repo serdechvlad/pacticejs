@@ -30,16 +30,34 @@
  *? Визначте, в яку чверть години потрапляє
  *? це число (у першу, другу, третю чи четверту).
  */
-const min = 1;
-if (min <= 15) {
-  console.log("Перша четверть");
-}
-if (min > 15 && min <= 30) {
-  console.log("Друга четверть");
-}
-if (min > 30 && min <= 45) {
-  console.log("Третя четверть");
-}
-if (min > 45 && min <= 60) {
-  console.log("Четверта четверть");
-}
+// const min = 1;
+// if (min <= 15) {
+//   console.log("Перша четверть");
+// }
+// if (min > 15 && min <= 30) {
+//   console.log("Друга четверть");
+// }
+// if (min > 30 && min <= 45) {
+//   console.log("Третя четверть");
+// }
+// if (min > 45 && min <= 60) {
+//   console.log("Четверта четверть");
+// }
+
+// ~ TODO:==========================
+// Напиши функцію findSmallerNumber(numbers)
+// яка приймає массив numbers, шукає найменше число в масиві і повертає це число.
+
+// const numbers = [12, 5, 35, 56, 3, 24, 7, 80, 12];
+
+// function findSmallerNumber(arr) {
+//   let min = arr[0];
+//   for (const item of arr) {
+//     if (item < min) {
+//       min = item;
+//     }
+//   }
+//   return min;
+// }
+// const result = findSmallerNumber(numbers);
+// console.log(result);
