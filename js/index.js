@@ -48,16 +48,48 @@
 // Напиши функцію findSmallerNumber(numbers)
 // яка приймає массив numbers, шукає найменше число в масиві і повертає це число.
 
-const numbers = [12, 5, 35, 56, 3, 24, 7, 80, 12];
+// const numbers = [12, 5, 35, 56, 3, 24, 7, 80, 12];
 
-function findSmallerNumber(arr) {
-  let min = arr[0];
-  for (const item of arr) {
-    if (item < min) {
-      min = item;
+// function findSmallerNumber(arr) {
+//   let min = arr[0];
+//   for (const item of arr) {
+//     if (item < min) {
+//       min = item;
+//     }
+//   }
+//   return min;
+// }
+// const result = findSmallerNumber(numbers);
+// console.log(result);
+
+//Напишіть функцію unique(arr), приймає масив рядків і повертає масив унікальні елементів.
+
+const words = [
+  "HTML",
+  "CSS",
+  "JS",
+  "React",
+  "JS",
+  "CSS",
+  "JS",
+  "Node.js",
+  "JS",
+  "React",
+  "CSS",
+  "React",
+  "HTML",
+  "Node.js",
+];
+
+function unique(arr) {
+  const array = [];
+
+  for (const word of arr) {
+    if (!array.includes(word)) {
+      array.push(word);
     }
   }
-  return min;
+  return array;
 }
-const result = findSmallerNumber(numbers);
-console.log(result);
+
+console.log(unique(words));
