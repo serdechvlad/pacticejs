@@ -99,21 +99,19 @@
 //у рядку на протилежний
 //Наприклад 'JavaScript' повинен повернути 'jAVAsCRIPT'
 
-// function makeInvetedString(string) {
-//   const newArray = string.split("");
-//   const updateArray = []; 
-//   for (let letter of newArray) {  
+function makeInvetedString(string) {
+  const newArray = string.split("");
+  const updateArray = []; 
+  for (let letter of newArray) {  
      
-//     if (letter === letter.toUpperCase()) {     
-//       letter = letter.toLowerCase();
-//       updateArray.push(letter);
-//     }
-//     else {
-//       letter = letter.toUpperCase();
-//       updateArray.push(letter);
-//     }    
-//   }
-//   return updateArray.join("");
-//   }
+    if (letter === letter.toUpperCase()) {           
+      updateArray.push(letter.toLowerCase());
+    }
+    else {     
+      updateArray.push(letter.toUpperCase());
+    }    
+  }
+  return updateArray.join("");
+  }
 
-// console.log(makeInvetedString("JavaScript"));
+console.log(makeInvetedString("JavaScript"));
