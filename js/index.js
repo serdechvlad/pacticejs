@@ -121,7 +121,7 @@
 // і повертає рядок js is the best
 // вхідний массив не має змінюватись (мутується)
 
-const arr = ["best", "the", "foo", "is", "js"];
+// const arr = ["best", "the", "foo", "is", "js"];
 // function createStringFromArr(arr) {
 //   const index = arr.indexOf("foo");
 //   const copyArr = arr.slice();
@@ -139,15 +139,211 @@ const arr = ["best", "the", "foo", "is", "js"];
 
 // Напиши функцію, яка приймає два масиви і повертає массив спільних значень
 
-const array1 = [1, 23, 3, 7, 5];
-const array2 = [3, 5, 4, 23, 9];
-function newArray(arr1, arr2) {
-  const result = [];
-  for (const item of arr1) {
-    if (arr2.includes(item)) {
-      result.push(item);
-    }
-  }
-  return result;
-}
-console.log(newArray(array1, array2));
+// const array1 = [1, 23, 3, 7, 5];
+// const array2 = [3, 5, 4, 23, 9];
+// function newArray(arr1, arr2) {
+//   const result = [];
+//   for (const item of arr1) {
+//     if (arr2.includes(item)) {
+//       result.push(item);
+//     }
+//   }
+//   return result;
+// }
+// console.log(newArray(array1, array2));
+
+// Напишіть функцію checkKeyInObject(), яка приймає 2 параметри obj і key.
+// Функція буде перебирати об'єкт.
+// Якщо об'єкт має такий ключ - поверне true, в іншому випадку - false.
+
+// const user = {
+//     name: 'Igor',
+//     car:  'Mercedes',
+//     carColor: 'black'
+// }
+
+// const checkKeyInObject = (object, key) => {
+//   return key in object;
+//   for (const keyObj in object) {
+//     if (keyObj === key) {
+//       return true;
+//     }
+//   }
+//   return false;
+//   return Object.keys(object)
+//     .includes(key);
+// }
+
+// console.log(checkKeyInObject(user, "name"));
+// console.log(checkKeyInObject(user, "clon"));
+
+// const user = {
+//   name: "Peter",
+//   surname: "Parker",
+//   age: 22,
+//   position: "spider-man",
+// };
+
+// user.getinfo = function () {
+//   return `Name: ${this.name}. Surname: ${this.surname}. Age: ${this.age}. Position: ${this.position}.`;
+// };
+
+// console.log(user.getinfo());
+
+// Є об'єкт, у якому зберігаються обрані товари у кошику.
+// Напишіть код для визначення загальної суму замовлення
+// і збережіть його результат у змінній totalCost.
+// Якщо об'єкт cart порожній, то результат має бути 0.
+
+// const cart = {
+//   apple: 50,
+//   banana: 30,
+//   orange: 40,
+// };
+
+// console.log('hi');
+
+// const values = Object.values(cart);
+// const totalCost = values.reduce((acc, fruit) => acc + fruit, 0);
+// console.log(totalCost);
+
+// const myObj = {
+//   name: "John",
+//   age: 30,
+//   gender: "male",
+// };
+// function getObjectKeys(object) {
+//   return Object.keys(object);
+// }
+// const getObjectKeys = (object) => Object.keys(object);
+
+// console.log(getObjectKeys(myObj));
+
+// Напишіть функцію sayHi(), яка приймає в якості параметра масив імен,
+// перебирає масив і додає до кожного ім'я привітання.
+// Функція повертає новий масив  ["Ivan привіт!", "Maria привіт!", "Anna привіт!"]
+
+// const names = ['Ivan', 'Maria', 'Anna'];
+
+// Напишіть функцію sayHi(), яка приймає в якості параметра масив імен,
+// перебирає масив і додає до кожного ім'я привітання.
+// Функція повертає новий масив  ["Ivan привіт!", "Maria привіт!", "Anna привіт!"]
+
+// const names = ['Ivan', 'Maria', 'Anna'];
+// function sayHi(array) {
+//     return array.map(element => `${element} привіт!`)
+
+// }
+// console.log(sayHi(names));
+
+// const age = students.every(({age}) => age >= 18);
+// console.log(age);
+
+// Зібрати в allTopics масив всіх предметів всіх курсів.
+// Виконати фільтрацію, залишивши в allTopics тільки унікальні елементи.
+
+// const courses = [
+//   {
+//     name: "Basic HTML+CSS",
+//     topics: ["VSCode", "HTML", "CSS", "GitHub", "GitHub Desctop"],
+//   },
+//   {
+//     name: "Intermediate HTML+CSS",
+//     topics: ["VSCode", "HTML", "CSS", "GitHub", "Git", "Terminal"],
+//   },
+//   {
+//     name: "Basic JavaScript",
+//     topics: [
+//       "VSCode",
+//       "Type system",
+//       "Loops",
+//       "Function",
+//       "Git",
+//       "Conditions",
+//       "Classes",
+//       "GitHub",
+//       "DOM",
+//     ],
+//   },
+//   {
+//     name: "Intermediate JavaScript",
+//     topics: [
+//       "VSCode",
+//       "NPM",
+//       "Bundlers",
+//       "Transpiling",
+//       "Git",
+//       "Promises",
+//       "AJAX",
+//       "GitHub",
+//     ],
+//   },
+// ];
+// const allTopics = courses
+//   .flatMap((cours) => cours.topics)
+//   .filter((item, index, array) => array.indexOf(item) === index);
+
+// console, console.log(allTopics);
+
+// 1. Напишіть функцію getAllFriendsNames(), котра поверне масив імен усіх друзів.
+// 2. Напишіть функцію getTotalBoysYears() яка порахує загальний вік хлопців.
+
+// const friends = [
+//   {
+//     passport: "03005988",
+//     name: "Joseph Francis Tribbiani Jr",
+//     age: 32,
+//     sex: "m",
+//   },
+//   { passport: "03005989", name: "Chandler Muriel Bing", age: 33, sex: "m" },
+//   { passport: "03005990", name: "Ross Eustace Geller", age: 33, sex: "m" },
+//   { passport: "03005991", name: "Rachel Karen Green", age: 31, sex: "f" },
+//   { passport: "03005992", name: "Monica Geller", age: 31, sex: "f" },
+//   { passport: "03005993", name: "Phoebe Buffay", age: 34, sex: "f" },
+// ];
+
+// const getAllFriendsNames = (users) => friends.map((friend) => friend.name);
+
+// const getAllFriendsNames = (users, gender) =>
+//   friends
+//     .filter((friend) => friend.sex === gender)
+//     .reduce((total, friend) => total + friend.age, 0);
+// console.log(getAllFriendsNames(friends, "f"));
+
+// Маємо масив об'єктів, який представляє список замовлень:
+// Завдання:
+// 1. Перевірте, чи всі замовлення виконані.
+// 2. Поверніть список товарів з усіх виконаних замовлень.
+
+// const orders = [
+//   { id: 1, products: ["Milk", "Bread"], status: "completed" },
+//   { id: 2, products: ["Eggs", "Juice"], status: "processing" },
+//   { id: 3, products: ["Pasta", "Spices"], status: "completed" },
+// ];
+
+// const checkComplited = (array) =>
+//   array.every((element) => element.status === "completed");
+
+// const allProduct = (array) =>
+//   array
+//     .filter((element) => element.status === "completed")
+//     .flatMap((element) => element.products);
+
+// console.log(checkComplited(orders));
+// console.log(allProduct(orders));
+
+// const posts = [
+//     { title: 'Post 1', likes: 20, category: 'Tech' },
+//     { title: 'Post 2', likes: 45, category: 'Fashion' },
+//     { title: 'Post 3', likes: 12, category: 'Tech' },
+//     { title: 'Post 4', likes: 30, category: 'Fitness' },
+//     { title: 'Post 5', likes: 15, category: 'Fashion' },
+//     { title: 'Post 6', likes: 50, category: 'Tech' }
+//   ];
+
+//   const allLikes = posts
+//   .filter(post => post.category === 'Fashion')
+//   .map(post => post.likes)
+//   .reduce((sumLikes, item) => sumLikes + item, 0)
+
+//   console.log(allLikes)
