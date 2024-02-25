@@ -97,6 +97,17 @@ function handleClick(event) {
 у кожному елементі списку у 2 рази
 */
 
+const listRef = document.querySelectorAll(".list .listItem");
+const listButtonRef = document.querySelector("#double");
+
+listButtonRef.addEventListener("click", double);
+
+function double() {
+  listRef.forEach(
+    (item) => (item.textContent = BigInt(item.textContent) ** 2n)
+  );
+}
+
 //TODO:==============================================
 /*
 Завдання 7
