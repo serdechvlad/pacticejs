@@ -37,6 +37,18 @@ function change() {
 "Розкрити", при повторному натисканні текст знову стає доступним
 і кнопка набуває початкового вигляду.
 */
+const passwordInputRef = document.querySelector("#passwordInput");
+const passwordButtonRef = document.querySelector("#passwordButton");
+
+passwordButtonRef.addEventListener("click", () => {
+  if (passwordInputRef.type === "password") {
+    passwordInputRef.type = "text";
+    passwordButtonRef.textContent = "Приховати";
+    return;
+  }
+  passwordInputRef.type = "password";
+  passwordButtonRef.textContent = "Розкрити";
+});
 
 //TODO:==============================================
 /*
