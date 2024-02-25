@@ -62,18 +62,34 @@ decreaseRef.addEventListener("click", () => {
   const size = parseInt(getComputedStyle(boxRef).width);
   boxRef.style.width = size - 10 + "px";
   boxRef.style.height = size - 10 + "px";
-})
+});
 increaseRef.addEventListener("click", () => {
   const size = parseInt(getComputedStyle(boxRef).width);
   boxRef.style.width = size + 10 + "px";
   boxRef.style.height = size + 10 + "px";
-})
+});
 //TODO:==============================================
 /*
 Завдання 5
 Додайте слухач кліку на window і визначте чи клікнув користувач у дів з id="place".
 */
+const placeRef = document.querySelector("#place");
+window.addEventListener("click", handleClick);
 
+function handleClick(event) {
+  // if (placeRef === event.target) {
+  //   console.log(true);
+  // }
+  // if (event.target.id === "place") {
+  //   console.log(true);
+  // }
+  if (event.target.nodeName === "DIV") {
+    console.log(true);
+  }
+}
+//   console.log(event.currentTarget);
+//   console.log(event.target);
+// }
 //TODO:==============================================
 /*
 Завдання 6
