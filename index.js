@@ -6,13 +6,11 @@
 const alertButtonRef = document.querySelector("#alertButton");
 const alertInputRef = document.querySelector("#alertInput");
 
-alertButtonRef.addEventListener("click", onAlertBtnClick)
+alertButtonRef.addEventListener("click", onAlertBtnClick);
 
 function onAlertBtnClick() {
-    alert(alertInputRef.value);
+  alert(alertInputRef.value);
 }
-
-
 
 //TODO:==============================================
 /*
@@ -20,7 +18,18 @@ function onAlertBtnClick() {
 Після натискання кнопки "SWAP ME" здійснюється обмін вмістом між двома інпутами.
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
+const buttonRef = document.querySelector("#swapButton");
+const firstInputRef = document.querySelector("#leftSwapInput");
+const secondInputRef = document.querySelector("#rightSwapInput");
 
+buttonRef.addEventListener("click", change);
+
+function change() {
+  const firstInputValue = firstInputRef.value;
+  const secondInputValue = secondInputRef.value;
+  secondInputRef.value = firstInputValue;
+  firstInputRef.value = secondInputValue;
+}
 //TODO:==============================================
 /*
 Завдання 3
